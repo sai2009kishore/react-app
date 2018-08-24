@@ -1,15 +1,34 @@
-import React from "react";
+import React from 'react';
 
 class EventTest extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {isLit : false};
+    }
+
     render() {
         return (
-            <button onClick={clickEvent} >Click me</button>
+            <div>
+                <center>
+                    <img src={this.state.isLit ? "./assets/pic_bulbon.gif" : "./assets/pic_bulboff.gif"} alt = "Bulb" width="150px"/>
+                    <br/><br/>
+                    <button onClick={this.clickEvent} >Click me</button>
+                </center>
+            </div>
         );
+    }
+
+    clickEvent= () => {
+        this.setState(prevState => ({
+            isLit : !prevState.isLit
+          }));
     }
 }
 
-function clickEvent(e) {
-    console.log("I was clicked");
+function AppTest() {
+    return (<div>
+        <EventTest/>
+    </div>);
 }
 
-export default EventTest;
+export default AppTest;
