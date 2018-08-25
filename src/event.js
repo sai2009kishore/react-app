@@ -25,10 +25,4 @@ class EventTest extends React.Component {
     }
 }
 
-function AppTest() {
-    return (<div>
-        <EventTest/>
-    </div>);
-}
-
-export default AppTest;
+export default EventTest;
