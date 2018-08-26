@@ -1,8 +1,9 @@
 import React from 'react';
 
-class Clock extends React.Component {
+class ClockController extends React.Component {
     constructor(props) {
         super(props);
+        document.title = "Clock";
         this.state = {time : new Date().toLocaleTimeString()};
     }
 
@@ -23,10 +24,4 @@ class Clock extends React.Component {
     }
 }
 
-function App() {
-    return (<div>
-        <Clock/>
-    </div>);
-}
-
-export default App;
+export default ClockController;

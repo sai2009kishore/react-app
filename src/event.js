@@ -1,8 +1,9 @@
 import React from 'react';
 
-class EventTest extends React.Component {
+class EventController extends React.Component {
     constructor(props) {
         super(props);
+        document.title = "Event";
         this.state = {isLit : false};
     }
 
@@ -25,4 +26,4 @@ class EventTest extends React.Component {
     }
 }
 
-export default EventTest;
+export default EventController;

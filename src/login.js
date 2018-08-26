@@ -3,11 +3,8 @@ import React from 'react';
 class LoginController extends React.Component {
     constructor(props) {
         super(props);
+        document.title = "Login";
         this.state = { isLoggedIn: false };
-    }
-
-    handleChange = (event) => {
-        this.setState({ [event.target.name]: event.target.value });
     }
 
     render() {
@@ -21,6 +18,10 @@ class LoginController extends React.Component {
                 }
             </form>
         );
+    }
+
+    handleChange = (event) => {
+        this.setState({ [event.target.name]: event.target.value });
     }
 
     login = (event) => {
