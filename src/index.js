@@ -9,7 +9,7 @@ import UserController from './controllers/users';
 import { Provider } from 'react-redux'
 import configureStore from './store/configureStore'
 
-const links = ["Home", "Clock", "Event", "Login", "Prime", "Persons"];
+const links = ["Home", "Clock", "Event", "Login", "Prime", "Users"];
 const store = configureStore()
 
 class RenderHome extends React.Component {
@@ -25,7 +25,7 @@ class RenderHome extends React.Component {
                     <Route path="/event" component={EventTest} />
                     <Route path="/login" component={LoginController} />
                     <Route path="/prime" component={PrimeCalculator} />
-                    <Route path="/persons" component={UserController} />
+                    <Route path="/users" component={UserController} />
                 </div>
             </Router>
         </Provider>);
