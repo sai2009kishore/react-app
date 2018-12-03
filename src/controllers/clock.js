@@ -20,7 +20,7 @@ class ClockController extends React.Component {
     }
 
     render() {
-        return <h1>The time is {this.state.time}</h1>
+        return <h1>The time is {this.state.time}</h1>;
     }
 }
 
